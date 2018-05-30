@@ -1,3 +1,5 @@
+import com.jfrog.bintray.gradle.BintrayUploadTask
+
 /*
  * Copyright 2014-2017 Netflix, Inc.
  *
@@ -136,4 +138,8 @@ pluginBundle {
             tags = ['nebula', 'rpm', 'centos']
         }
     }
+}
+
+tasks.withType(BintrayUploadTask) {
+    it.dryRun = true
 }
